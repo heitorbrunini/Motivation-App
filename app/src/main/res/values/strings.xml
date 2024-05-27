@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Motivation</string>
+    <string name="infinity_icon">infinity_icon</string>
+    <string name="bubble_icon">bubble_icon</string>
+    <string name="sun_icon">sun_icon</string>
+    <string name="hello_name">Olá, Kotlin!</string>
+    <string name="motivation_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</string>
+    <string name="new_text">nova frase</string>
+</resources>
