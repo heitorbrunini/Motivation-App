@@ -1,4 +1,4 @@
-package com.devbrunini.motivation
+package com.devbrunini.motivation.ui
 
 import android.os.Bundle
 import android.view.View
@@ -6,6 +6,9 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import com.devbrunini.motivation.utils.MotivationConstants
+import com.devbrunini.motivation.R
+import com.devbrunini.motivation.utils.SecurityPreferences
 import com.devbrunini.motivation.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity(), View.OnClickListener {
@@ -25,7 +28,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
             insets
         }
 
-        val name = SecurityPreferences(this).getString("USER_NAME")
+        val name = SecurityPreferences(this).getString(MotivationConstants.KEY.USER_NAME)
 
         binding.textName.text = "Olá $name!"
         binding.buttonNewPhrase.setOnClickListener(this)

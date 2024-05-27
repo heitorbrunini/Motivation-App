@@ -1,4 +1,4 @@
-package com.devbrunini.motivation
+package com.devbrunini.motivation.utils
 
 import android.annotation.SuppressLint
 import android.content.Context

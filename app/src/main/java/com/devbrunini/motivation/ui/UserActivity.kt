@@ -1,4 +1,4 @@
-package com.devbrunini.motivation
+package com.devbrunini.motivation.ui
 
 import android.content.Intent
 import android.os.Bundle
@@ -9,8 +9,10 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
-import com.devbrunini.motivation.databinding.ActivityMainBinding
+import com.devbrunini.motivation.R
+import com.devbrunini.motivation.utils.SecurityPreferences
 import com.devbrunini.motivation.databinding.ActivityUserBinding
+import com.devbrunini.motivation.utils.MotivationConstants
 
 class UserActivity : AppCompatActivity(), OnClickListener {
 
@@ -29,7 +31,16 @@ class UserActivity : AppCompatActivity(), OnClickListener {
         }
 
         binding.buttonSave.setOnClickListener(this)
+        verifyUserName()
 
+    }
+
+    private fun verifyUserName(){
+        val name = SecurityPreferences(this).getString(MotivationConstants.KEY.USER_NAME)
+        if(name !=""){
+            Intent(this, MainActivity::class.java)
+            finish()
+        }
     }
 
     override fun onClick(v: View) {
