@@ -25,6 +25,9 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
             insets
         }
 
+        val name = SecurityPreferences(this).getString("USER_NAME")
+
+        binding.textName.text = "Olá $name!"
         binding.buttonNewPhrase.setOnClickListener(this)
     }
 
