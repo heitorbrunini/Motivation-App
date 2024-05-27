@@ -12,7 +12,7 @@
         android:id="@+id/linear_1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="#3F51B5"
+        android:background="@color/violet_primary"
         android:orientation="horizontal"
         android:paddingTop="8dp"
         android:paddingBottom="8dp"
@@ -37,7 +37,7 @@
             android:src="@drawable/ic_bubble"
             android:minWidth="40dp"
             android:minHeight="40dp"
-            app:tint="#1E2968"
+            app:tint="@color/violet_secondary"
             android:layout_weight="1"
 
             />
@@ -47,7 +47,7 @@
             android:contentDescription="@string/sun_icon"
             android:src="@drawable/ic_sun"
             android:minWidth="40dp"
-            app:tint="#1E2968"
+            app:tint="@color/violet_secondary"
             android:minHeight="40dp"
             android:layout_weight="1"
 

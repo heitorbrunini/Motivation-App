@@ -6,4 +6,7 @@
     <string name="hello_name">Olá, Kotlin!</string>
     <string name="motivation_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</string>
     <string name="new_text">nova frase</string>
+    <string name="lets_start">Vamos começar?</string>
+    <string name="what_is_your_name">Qual seu nome?</string>
+    <string name="save">salvar</string>
 </resources>
