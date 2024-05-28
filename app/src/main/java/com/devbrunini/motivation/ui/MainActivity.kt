@@ -9,13 +9,14 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.devbrunini.motivation.utils.MotivationConstants
 import com.devbrunini.motivation.R
+import com.devbrunini.motivation.data.Mock
 import com.devbrunini.motivation.utils.SecurityPreferences
 import com.devbrunini.motivation.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity(), View.OnClickListener {
 
     private lateinit var binding: ActivityMainBinding
-    private var categoryId=1
+    private var categoryId=MotivationConstants.FILTER.INFINITY
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -34,6 +35,9 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         val name = SecurityPreferences(this).getString(MotivationConstants.KEY.USER_NAME)
 
         binding.textName.text = "Olá $name!"
+        handleFilter(R.id.image_infinity)
+        handleNextPhrase()
+
 
         binding.buttonNewPhrase.setOnClickListener(this)
         binding.imageSun.setOnClickListener(this)
@@ -45,11 +49,16 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
     override fun onClick(v: View) {
 
         if (v.id == R.id.button_new_phrase){
-
+            handleNextPhrase()
         }else if (v.id in listOf( R.id.image_infinity, R.id.image_sun, R.id.image_bubble)){
             handleFilter(v.id)
         }
 
+    }
+
+    private fun handleNextPhrase(){
+        val phrase = Mock().getPhrase(categoryId)
+        binding.textMotivation.text = phrase
     }
 
     private fun handleFilter(id: Int){
@@ -59,19 +68,19 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
                 binding.imageInfinity.setColorFilter(ContextCompat.getColor(this, R.color.white))
                 binding.imageSun.setColorFilter(ContextCompat.getColor(this, R.color.violet_secondary))
                 binding.imageBubble.setColorFilter(ContextCompat.getColor(this, R.color.violet_secondary))
-                categoryId = 1
+                categoryId = MotivationConstants.FILTER.INFINITY
             }
             R.id.image_sun -> {
                 binding.imageInfinity.setColorFilter(ContextCompat.getColor(this,R.color.violet_secondary))
                 binding.imageSun.setColorFilter(ContextCompat.getColor(this, R.color.white))
                 binding.imageBubble.setColorFilter(ContextCompat.getColor(this, R.color.violet_secondary))
-                categoryId = 3
+                categoryId = MotivationConstants.FILTER.SUN
             }
             R.id.image_bubble -> {
                 binding.imageInfinity.setColorFilter(ContextCompat.getColor(this,R.color.violet_secondary))
                 binding.imageSun.setColorFilter(ContextCompat.getColor(this, R.color.violet_secondary))
                 binding.imageBubble.setColorFilter(ContextCompat.getColor(this, R.color.white))
-                categoryId = 2
+                categoryId = MotivationConstants.FILTER.BUBBLE
             }
         }
 
