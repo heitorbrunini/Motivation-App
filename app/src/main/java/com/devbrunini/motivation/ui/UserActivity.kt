@@ -38,7 +38,7 @@ class UserActivity : AppCompatActivity(), OnClickListener {
     private fun verifyUserName(){
         val name = SecurityPreferences(this).getString(MotivationConstants.KEY.USER_NAME)
         if(name !=""){
-            Intent(this, MainActivity::class.java)
+            startActivity(Intent(this, MainActivity::class.java))
             finish()
         }
     }
