@@ -21,16 +21,19 @@
         >
 
         <ImageView
+            android:id="@+id/image_infinity"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:contentDescription="@string/infinity_icon"
             android:src="@drawable/ic_all_inclusive"
             android:minWidth="40dp"
             android:minHeight="40dp"
+            app:tint="@color/violet_secondary"
             android:layout_weight="1"
 
             />
         <ImageView
+            android:id="@+id/image_bubble"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:contentDescription="@string/bubble_icon"
@@ -42,6 +45,7 @@
 
             />
         <ImageView
+            android:id="@+id/image_sun"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:contentDescription="@string/sun_icon"
