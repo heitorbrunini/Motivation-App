@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="infinity_icon">infinity_icon</string>
+    <string name="bubble_icon">bubble_icon</string>
+    <string name="sun_icon">sun_icon</string>
+    <string name="app_name">Motivation</string>
+    <string name="new_phrase">New phrase</string>
+    <string name="what_is_your_name">What\'s your name?</string>
+    <string name="motivation_text">Phrase</string>
+    <string name="save">Save</string>
+    <string name="lets_start">Let\'s get started?</string>
+    <string name="hello_name">Hello</string>
+    <string name="invalid_name">Inform your name.</string>
+</resources>

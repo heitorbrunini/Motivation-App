@@ -60,7 +60,7 @@ class UserActivity : AppCompatActivity(), OnClickListener {
                 Intent(this, MainActivity::class.java))
                 finish()
         } else {
-            Toast.makeText(this, "Preencha seu nome", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this,R.string.invalid_name , Toast.LENGTH_SHORT).show()
         }
     }
 
