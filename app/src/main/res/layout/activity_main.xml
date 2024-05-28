@@ -100,7 +100,7 @@
         android:layout_alignParentBottom="true"
         android:layout_marginBottom="32dp"
         android:layout_centerHorizontal="true"
-        android:text="@string/new_text"
+        android:text="@string/new_phrase"
         android:textColor="@color/white"
         android:textAllCaps="true"
         />

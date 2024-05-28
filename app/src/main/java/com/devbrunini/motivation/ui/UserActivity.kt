@@ -40,7 +40,7 @@ class UserActivity : AppCompatActivity(), OnClickListener {
         if(name !=""){
             startActivity(Intent(this, MainActivity::class.java))
             finish()
-        }
+        } 
     }
 
     override fun onClick(v: View) {
